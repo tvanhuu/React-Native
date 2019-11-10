@@ -1,0 +1,40 @@
+const colors = {
+  lighterGray: "#EEEEEE",
+  lightGray: "#E5E5E5",
+  gray: "#C4C4C4",
+  darkGray: "#878787",
+  red: "#F77062",
+  darkRed: "#b71c1c",
+  lightRed: "#FF3D00",
+  hightRed: "#FF0000",
+  transparent: "rgba(0,0,0,0)",
+  cyan: "#F9F4F0",
+  blue: "#2196f3",
+  darkBlue: "#051A36",
+  darkerBlue: "#04152A",
+  yellow: "#FFC61B",
+  orange: "#ff9800",
+  green: "#79DB69",
+  white: "#FFFFFF",
+  darkWhite: "#F9FAFB",
+  black: "#000000",
+  brown: "#B78543",
+  brownCafe: "#DBAC69",
+  pink: "#F9F4F0",
+  darkPink: "#F9E4D3",
+  opacityBlack: "rgba(0, 0, 0, 0.5)",
+  opacityBrowCafe: "rgba(219, 171, 105, 0.5)",
+  semiGray: "#E4E7E8",
+  shadow: "rgba(0, 0, 0, 0.15)"
+}
+
+export default {
+  primary: colors.brown,
+  secondary: colors.brownCafe,
+  background: colors.pink,
+  border: colors.lighterGray,
+  text: colors.darkGray,
+  error: colors.red,
+  shadow: colors.black,
+  ...colors
+}
