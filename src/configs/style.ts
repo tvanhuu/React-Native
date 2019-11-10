@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native"
 
-import fontSize from "../configs/fontSize"
+import fontSize from "/configs/fontSize"
 
 import color from "./color"
 import radius from "./radius"

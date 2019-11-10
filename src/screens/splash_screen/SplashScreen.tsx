@@ -1,8 +1,9 @@
 import React from "react"
-import { View, SafeAreaView, Text, ActivityIndicator } from "react-native"
+import { View, SafeAreaView, Text, ActivityIndicator, TouchableOpacity } from "react-native"
 
 import styles from "./styles"
 import { NavigationParams } from "react-navigation"
+import { lang, setLang } from "/language"
 
 interface Props {
   navigation: NavigationParams
@@ -20,7 +21,7 @@ class Temp extends React.PureComponent<Props, State> {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <ActivityIndicator size="small" color={"red"} />
-        <Text style={{ paddingTop: 10 }}>Loading...</Text>
+        <Text style={{ paddingTop: 10 }}>{lang.common.success}</Text>
       </View>
     )
   }

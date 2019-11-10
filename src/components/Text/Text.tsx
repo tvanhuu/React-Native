@@ -2,7 +2,7 @@ import React, { PureComponent } from "react"
 import { Text as RNText, View, StyleSheet } from "react-native"
 import TextProps from "./TextProps"
 import styles from "./styles"
-import { color } from "../../configs"
+import { color } from "/configs"
 
 class Text extends PureComponent<TextProps> {
   public static defaultProps: TextProps = {

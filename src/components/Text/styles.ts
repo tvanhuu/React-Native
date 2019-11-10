@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native"
 
-import { color, style, typography } from "../../configs"
+import { color, style, typography } from "/configs"
 
 export const TEXT_BASE = {
   fontFamily: typography.normal,

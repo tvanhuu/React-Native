@@ -12,6 +12,8 @@ const { languageTag } = fallback
 
 I18n.locale = languageTag
 
+export const lang = I18n.translations[languageTag] as AppLanguage
+
 export const setLang = (lang: keyof typeof languages) => {
   I18n.locale = lang
 }

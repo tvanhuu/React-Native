@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native"
 
-import { color } from "../../configs"
-import { responsive, getScreenHeight, getScreenWidth } from "../..//utils/dimension"
+import { color } from "/configs"
+import { responsive, getScreenHeight, getScreenWidth } from "/utils/dimension"
 
 const WIDTH = getScreenHeight(1)
 const HEIGHT = getScreenWidth(1)

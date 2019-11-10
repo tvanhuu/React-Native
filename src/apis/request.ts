@@ -1,10 +1,10 @@
 import axios, { AxiosRequestConfig } from "axios"
 import _ from "lodash"
-import Config from "react-native-config"
+// import Config from "react-native-config"
 import get from "ts-get"
 
-import { checkLocale } from "../helpers/Common"
-import { log } from "../utils/log"
+import { checkLocale } from "/helpers/Common"
+import { log } from "/utils/log"
 
 import { commonErrorMessage, commonErrors } from "./errors"
 
@@ -40,7 +40,7 @@ const headers = {
 }
 
 const Request = axios.create({
-  baseURL: Config.BASE_URL,
+  baseURL: "url",
   timeout: 10000,
   headers
   // ... other configs

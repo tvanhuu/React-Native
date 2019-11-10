@@ -1,4 +1,4 @@
-import { responsive } from "../utils/dimension"
+import { responsive } from "/utils/dimension"
 
 export default {
   s: responsive(6),

@@ -1,6 +1,6 @@
 import { createSwitchNavigator, createAppContainer } from "react-navigation"
 import { Routes } from "./router"
-import { SplashScreen, Temp } from "../screens"
+import { SplashScreen, Temp } from "/screens"
 
 const RootNavigator = createSwitchNavigator(
   {
