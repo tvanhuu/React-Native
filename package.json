@@ -8,7 +8,9 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "tslint --project tsconfig.json",
-    "lint:fix": "tslint --project tsconfig.json --fix"
+    "lint:fix": "tslint --project tsconfig.json --fix",
+    "prettier": "prettier --write \"{,!(node_modules|dist|android|ios|build|builds)/**/}*.{js,jsx,ts,tsx}\"",
+    "pre-commit": "npm run lint:fix && npm run prettier && npm run test"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.6.2",
@@ -16,12 +18,14 @@
     "@types/react-native": "^0.60.21",
     "@types/react-test-renderer": "^16.9.1",
     "axios": "^0.19.0",
+    "husky": "^3.0.9",
     "i18n-js": "^3.3.0",
+    "immer-reducer": "^0.7.9",
     "lodash": "^4.17.15",
+    "prettier-tslint": "^0.4.2",
     "react": "16.9.0",
     "react-native": "0.61.2",
     "react-native-gesture-handler": "^1.5.0",
-    "react-native-popup-menu": "^0.15.6",
     "react-native-vector-icons": "^6.6.0",
     "react-navigation": "^4.0.10",
     "react-redux": "7.1.0",
@@ -33,8 +37,7 @@
     "redux-saga-test-plan": "4.0.0-beta.4",
     "redux-thunk": "^2.3.0",
     "ts-get": "^1.0.5",
-    "typesafe-actions": "4.4.2",
-    "typescript": "^3.7.2"
+    "typesafe-actions": "4.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -64,27 +67,10 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-no-circular-imports": "^0.7.0",
-    "tslint-react": "^4.1.0"
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.7.2"
   },
   "jest": {
-    "preset": "ts-jest",
-    "transform": {
-      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
-      "\\.(ts|tsx)$": "ts-jest"
-    },
-    "globals": {
-      "ts-jest": {
-        "tsConfig": "tsconfig.jest.json"
-      }
-    },
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "setupFiles": [
-      "./tests/setup.js"
-    ]
+    "preset": "react-native"
   }
 }

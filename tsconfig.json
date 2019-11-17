@@ -12,6 +12,9 @@
     "module": "commonjs",
     "target": "esnext",
     "baseUrl": ".",
+    "importHelpers": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": false,
     "paths": {
       "/*": ["./src/*"]
     }

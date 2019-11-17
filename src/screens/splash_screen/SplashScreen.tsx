@@ -1,23 +1,32 @@
-import React from "react"
+import React, { Component } from "react"
 import { View, SafeAreaView, Text, ActivityIndicator, TouchableOpacity } from "react-native"
 
 import styles from "./styles"
 import { NavigationParams } from "react-navigation"
-import { lang, setLang } from "/language"
+import { appLanguages } from "/languages"
+import { compose } from "redux"
+import { withRedux, SplashReduxProps } from "./redux"
+import { log } from "/utils/log"
 
-interface Props {
+interface Props extends SplashReduxProps {
   navigation: NavigationParams
 }
 
 interface State {}
 
-class Temp extends React.PureComponent<Props, State> {
+class Splash extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = {}
   }
 
+  componentDidMount() {}
+
+  onSelectLanguage(value: keyof typeof appLanguages) {}
+
   render() {
+    const { currentLang, lang, languageActions } = this.props
+    log(this.props)
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <ActivityIndicator size="small" color={"red"} />
@@ -27,4 +36,4 @@ class Temp extends React.PureComponent<Props, State> {
   }
 }
 
-export default Temp
+export default compose(withRedux)(Splash)
