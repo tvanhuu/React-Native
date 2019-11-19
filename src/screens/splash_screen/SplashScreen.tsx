@@ -1,18 +1,12 @@
 import React, { Component } from "react"
-import { View, SafeAreaView, Text, ActivityIndicator, TouchableOpacity } from "react-native"
+import { View, Text, ActivityIndicator } from "react-native"
 
 import styles from "./styles"
-import { NavigationParams } from "react-navigation"
 import { appLanguages } from "/languages"
 import { compose } from "redux"
-import { withRedux, SplashReduxProps } from "./redux"
+import { withRedux } from "./redux"
 import { log } from "/utils/log"
-
-interface Props extends SplashReduxProps {
-  navigation: NavigationParams
-}
-
-interface State {}
+import { Props, State } from "./types"
 
 class Splash extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -20,13 +14,17 @@ class Splash extends React.Component<Props, State> {
     this.state = {}
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    log(this.props.currentLang)
+    this.props.languageActions.setLanguage(this.props.currentLang)
+  }
 
   onSelectLanguage(value: keyof typeof appLanguages) {}
 
   render() {
     const { currentLang, lang, languageActions } = this.props
-    log(this.props)
+    // setTimeout(() => languageActions.setLanguage("vn"), 5000)
+
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <ActivityIndicator size="small" color={"red"} />
