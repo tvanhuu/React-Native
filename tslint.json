@@ -1,11 +1,5 @@
 {
-  "extends": [
-    "tslint:recommended",
-    "tslint-eslint-rules",
-    "tslint-react",
-    "tslint-config-prettier",
-    "tslint-no-circular-imports"
-  ],
+  "extends": ["tslint:recommended", "tslint-eslint-rules", "tslint-react", "tslint:latest", "tslint-config-prettier", "tslint-no-circular-imports"],
   "linterOptions": {
     "exclude": ["node_modules", "dist"]
   },

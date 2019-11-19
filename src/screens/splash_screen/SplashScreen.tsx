@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { View, Text, ActivityIndicator } from "react-native"
-
 import styles from "./styles"
 import { appLanguages } from "/languages"
 import { compose } from "redux"
