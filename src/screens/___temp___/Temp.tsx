@@ -8,20 +8,20 @@ interface Props {}
 interface State {}
 
 class Temp extends React.PureComponent<Props, State> {
-   constructor(props: Props) {
-      super(props)
-      this.state = {}
-   }
+  constructor(props: Props) {
+    super(props)
+    this.state = {}
+  }
 
-   render() {
-      return (
-         <SafeAreaView style={{ flex: 1 }}>
-            <View style={styles.container}>
-               <Text>Temp</Text>
-            </View>
-         </SafeAreaView>
-      )
-   }
+  render() {
+    return (
+      <SafeAreaView style={{ flex: 1 }}>
+        <View style={styles.container}>
+          <Text>Temp</Text>
+        </View>
+      </SafeAreaView>
+    )
+  }
 }
 
 export default Temp

@@ -5,9 +5,9 @@ import { ParamsLogin } from "./type"
 import { User } from "/models/User"
 
 export const login = async (params: ParamsLogin): Promise<User> => {
-   const user = await Request.post<User>(API_LOGIN, params)
-   if (!user) {
-      throw ERROR
-   }
-   return user.data
+  const user = await Request.post<User>(API_LOGIN, params)
+  if (!user) {
+    throw ERROR
+  }
+  return user.data
 }

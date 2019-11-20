@@ -23,7 +23,7 @@
       "class-name": true,
       "curly": false,
       "deprecation": true,
-      "indent": [true, "spaces", 3],
+      "indent": [true, "spaces", 2],
       "interface-name": false,
       "import-spacing": true,
       "max-classes-per-file": [true, 1],
