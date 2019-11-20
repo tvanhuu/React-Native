@@ -22,8 +22,7 @@ export const getDimensions = () => Dimensions.get("window")
  *
  * @returns The calculated dp depending on current device's screen width.
  */
-export const getScreenWidth = (fraction = 1) =>
-  Math.ceil(Math.min(getDimensions().width, getDimensions().height) * fraction)
+export const getScreenWidth = (fraction = 1) => Math.ceil(Math.min(getDimensions().width, getDimensions().height) * fraction)
 
 /**
  * Converts provided height percentage to independent pixel (dp).
@@ -32,8 +31,7 @@ export const getScreenWidth = (fraction = 1) =>
  *
  * @returns The calculated dp depending on current device's screen height.
  */
-export const getScreenHeight = (fraction = 1) =>
-  Math.ceil(Math.max(getDimensions().width, getDimensions().height) * fraction)
+export const getScreenHeight = (fraction = 1) => Math.ceil(Math.max(getDimensions().width, getDimensions().height) * fraction)
 
 // Calculate the screen ratio with the [DESIGN_SCREEN_HEIGHT]
 const SCREEN_RATIO = getScreenHeight() / DESIGN_SCREEN_HEIGHT

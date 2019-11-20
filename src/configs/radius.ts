@@ -5,5 +5,5 @@ export default {
   m: responsive(10),
   l: responsive(20),
   xxl: responsive(24),
-  max: 9999
+  max: 9999,
 }

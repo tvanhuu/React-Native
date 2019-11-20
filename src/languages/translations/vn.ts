@@ -8,6 +8,6 @@ export const vn: AppLanguage = {
     close: "Đóng lại",
     ok: "Ok",
     yes: "Yes",
-    no: "No"
-  }
+    no: "No",
+  },
 }

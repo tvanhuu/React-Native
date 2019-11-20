@@ -8,19 +8,11 @@ class Text extends PureComponent<TextProps> {
   public static defaultProps: TextProps = {
     typography: "normal",
     style: {},
-    color: color.text
+    color: color.text,
   }
 
   render() {
-    const {
-      children,
-      style: styleOverride,
-      color,
-      leading,
-      trailing,
-      typography: typographyKey,
-      ...rest
-    } = this.props
+    const { children, style: styleOverride, color, leading, trailing, typography: typographyKey, ...rest } = this.props
 
     const style = StyleSheet.flatten([styles.text, { color }, styleOverride])
 

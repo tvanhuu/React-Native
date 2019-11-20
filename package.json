@@ -5,14 +5,15 @@
   "scripts": {
     "android": "ENVFILE=.env.development react-native run-android",
     "build:android": "cd android && ENVFILE=.env.production ./gradlew assembleRelease",
+    "pod": "cd ios && pod install && cd ..",
     "ios": "ENVFILE=.env.development react-native run-ios --simulator 'iPhone X'",
     "start": "react-native start",
-    "test": "jest",
+    "test": "BABEL_ENV=test jest --no-cache",
     "lint": "tslint --project tsconfig.json",
     "lint:fix": "tslint --project tsconfig.json --fix",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "prettier": "prettier --write \"{,!(node_modules|dist|android|ios|build|builds)/**/}*.{js,jsx,ts,tsx}\"",
-    "pre-commit": "npm run lint:fix && npm run prettier && npm run test"
+    "pre-commit": "npm run lint:fix && npm run prettier"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.6.2",
@@ -73,9 +74,6 @@
     "tslint-no-circular-imports": "^0.7.0",
     "tslint-react": "^4.1.0",
     "typescript": "^3.7.2"
-  },
-  "jest": {
-    "preset": "react-native"
   },
   "husky": {
     "hooks": {

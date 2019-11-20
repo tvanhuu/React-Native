@@ -9,13 +9,13 @@ import { ReduxScreenProps } from "/utils/types"
 const mapStateToProps = (state: AppState) => {
   return {
     lang: languageSelector(state),
-    currentLang: currentLanguageSelector(state)
+    currentLang: currentLanguageSelector(state),
   }
 }
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
   return {
-    languageActions: bindActionCreators(LanguageActions, dispatch)
+    languageActions: bindActionCreators(LanguageActions, dispatch),
   }
 }
 

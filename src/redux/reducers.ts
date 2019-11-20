@@ -3,7 +3,7 @@ import { AppReducerType } from "./types"
 import { LanguageReducers } from "/redux/language"
 
 const reducers = combineReducers({
-  [AppReducerType.LANGUAGE]: LanguageReducers
+  [AppReducerType.LANGUAGE]: LanguageReducers,
 })
 
 export default reducers

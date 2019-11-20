@@ -4,5 +4,5 @@ export enum Routes {
   MAIN_NAVIGATOR = "MainNavigator",
   HOME_NAVIGATOR = "HomeNavigator",
   SPLASH_SCREEN = "SplashScreen",
-  TEMP = "TEMP"
+  TEMP = "TEMP",
 }

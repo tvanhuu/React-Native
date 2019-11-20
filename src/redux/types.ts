@@ -1,5 +1,5 @@
 export enum AppReducerType {
-  LANGUAGE = "languages"
+  LANGUAGE = "languages",
 }
 
 export enum ReduxStateType {
@@ -7,7 +7,7 @@ export enum ReduxStateType {
   LOADING = "loading",
   SUCCESS = "success",
   ERROR = "error",
-  CANCELLED = "cancelled"
+  CANCELLED = "cancelled",
 }
 
 export interface ReduxData<T> {

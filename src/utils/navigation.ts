@@ -4,8 +4,7 @@ import { log } from "./log"
 
 export const isNavigationState = (state: unknown): state is { nav: NavigationState } => true
 
-export const hasRouteName = (route: unknown): route is NavigationState & { routeName: string } =>
-  true
+export const hasRouteName = (route: unknown): route is NavigationState & { routeName: string } => true
 
 export const getActiveRouteState = (route: NavigationState): string => {
   try {

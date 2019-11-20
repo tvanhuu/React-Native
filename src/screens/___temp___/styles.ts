@@ -11,6 +11,6 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: color.background,
     alignItems: "center",
-    justifyContent: "center"
-  }
+    justifyContent: "center",
+  },
 })
