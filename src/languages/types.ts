@@ -8,4 +8,7 @@ export default interface AppLanguage {
     yes: string
     no: string
   }
+  error: {
+    error: string
+  }
 }

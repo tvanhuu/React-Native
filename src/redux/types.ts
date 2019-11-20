@@ -1,5 +1,8 @@
+import { CallEffect } from "redux-saga/effects"
+
 export enum AppReducerType {
   LANGUAGE = "languages",
+  USER = "users",
 }
 
 export enum ReduxStateType {
@@ -17,3 +20,5 @@ export interface ReduxData<T> {
 }
 
 export const isReduxData = <T>(data: unknown): data is ReduxData<T> => true
+
+export type EffectResult<T> = T extends CallEffect<infer R> ? R : unknown

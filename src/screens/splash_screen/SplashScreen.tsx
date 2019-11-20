@@ -7,6 +7,8 @@ import { withRedux } from "./redux"
 import { log } from "/utils/log"
 import { Props, State } from "./types"
 import Config from "react-native-config"
+import { userInfo } from "os"
+import { ReduxStateType } from "/redux/types"
 
 class Splash extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -15,16 +17,33 @@ class Splash extends React.Component<Props, State> {
   }
 
   componentDidMount() {
-    log(this.props.currentLang)
-    this.props.languageActions.setLanguage(this.props.currentLang)
+    // this.props.languageActions.setLanguage(this.props.currentLang)
+    // this.props.userAction.login({ username: "demacia2k12@gmail.com", password: "Topica@123" })
   }
 
-  onSelectLanguage(value: keyof typeof appLanguages) {}
+  componentDidUpdate(prevProps: Props, prevState: State) {
+    const { userState } = this.props
+
+    if (prevProps.userState !== userState) {
+      switch (userState.status) {
+        case ReduxStateType.LOADING:
+          log("LOADING")
+          break
+        case ReduxStateType.SUCCESS:
+          log("SUCCESS", userState.data)
+          break
+        case ReduxStateType.ERROR:
+          log("ERROR", userState.error)
+          break
+        case ReduxStateType.CANCELLED:
+          log("CANCELLED")
+          break
+      }
+    }
+  }
 
   render() {
-    // log(Config.BASE_URL)
     const { currentLang, lang, languageActions } = this.props
-    // setTimeout(() => languageActions.setLanguage("vn"), 5000)
 
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>

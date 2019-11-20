@@ -22,7 +22,7 @@ const requestLog = (method: string = "", url: string = "", data: unknown, type: 
   }
 
   log(
-    `%c${icons[type]} [${tag.toUpperCase()}] | %c${url.replace("Config.BASE_URL", "")} \n`,
+    `%c${icons[type]} [${tag.toUpperCase()}] | %c${url.replace(Config.BASE_URL, "")} \n`,
     `color: ${colors[type]}; font-weight: bold`,
     "color: violet; font-weight: bold",
     data,

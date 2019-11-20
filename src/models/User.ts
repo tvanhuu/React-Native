@@ -1,5 +1,17 @@
 export interface User {
-  name?: string
-  firstName?: string
-  age?: number
+  accessToken?: string
+  avatar?: string
+  displayName?: string
+  email?: string
+  expiredTime?: number
+  id?: string
+  language?: string
+  refreshToken?: string
+  role?: ROLE
+  timezone?: string
+}
+
+export enum ROLE {
+  ADMIN,
+  USERS,
 }

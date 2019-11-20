@@ -10,4 +10,7 @@ export const vn: AppLanguage = {
     yes: "Yes",
     no: "No",
   },
+  error: {
+    error: "Co loi xay ra vui long kiem tra lai",
+  },
 }

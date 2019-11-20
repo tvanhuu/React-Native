@@ -10,4 +10,7 @@ export const en: AppLanguage = {
     yes: "Yes",
     no: "No",
   },
+  error: {
+    error: "Do somethings Error",
+  },
 }
