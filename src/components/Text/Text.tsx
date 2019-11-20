@@ -5,35 +5,35 @@ import styles from "./styles"
 import { color } from "/configs"
 
 class Text extends PureComponent<TextProps> {
-  public static defaultProps: TextProps = {
-    typography: "normal",
-    style: {},
-    color: color.text,
-  }
+   public static defaultProps: TextProps = {
+      typography: "normal",
+      style: {},
+      color: color.text,
+   }
 
-  render() {
-    const { children, style: styleOverride, color, leading, trailing, typography: typographyKey, ...rest } = this.props
+   render() {
+      const { children, style: styleOverride, color, leading, trailing, typography: typographyKey, ...rest } = this.props
 
-    const style = StyleSheet.flatten([styles.text, { color }, styleOverride])
+      const style = StyleSheet.flatten([styles.text, { color }, styleOverride])
 
-    const text = (
-      <RNText style={style} {...rest}>
-        {children}
-      </RNText>
-    )
-
-    if (leading || trailing) {
-      return (
-        <View style={styles.container}>
-          {leading}
-          {text}
-          {trailing}
-        </View>
+      const text = (
+         <RNText style={style} {...rest}>
+            {children}
+         </RNText>
       )
-    }
 
-    return text
-  }
+      if (leading || trailing) {
+         return (
+            <View style={styles.container}>
+               {leading}
+               {text}
+               {trailing}
+            </View>
+         )
+      }
+
+      return text
+   }
 }
 
 export default Text

@@ -7,11 +7,11 @@ import i18n, { TranslateOptions } from "i18n-js"
  * @param options Translate options
  */
 export const translate = (key: string, options?: TranslateOptions) => {
-  return key
-    ? i18n.t(key, {
-        message: key,
-        defaultValue: key,
-        ...options,
-      })
-    : key
+   return key
+      ? i18n.t(key, {
+           message: key,
+           defaultValue: key,
+           ...options,
+        })
+      : key
 }

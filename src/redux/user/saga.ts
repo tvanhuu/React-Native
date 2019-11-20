@@ -7,23 +7,23 @@ import { EffectResult } from "../types"
 import { type } from "os"
 
 export function* login(action: ReturnType<typeof UserActions.login>): Generator {
-  try {
-    const user: EffectResult<User> = yield call(authApi.login, action.payload)
+   try {
+      const user: EffectResult<User> = yield call(authApi.login, action.payload)
 
-    // TODO setToken
+      // TODO setToken
 
-    yield put(UserActions.success(user))
-  } catch (error) {
-    yield put(UserActions.error(error))
-  }
+      yield put(UserActions.success(user))
+   } catch (error) {
+      yield put(UserActions.error(error))
+   }
 }
 
 function* watchLogin() {
-  yield takeLatest(UserActions.login.type, login)
+   yield takeLatest(UserActions.login.type, login)
 }
 
 export default function* userSaga() {
-  yield all([watchLogin()])
+   yield all([watchLogin()])
 }
 
 type Check<T> = T extends unknown ? {} : T

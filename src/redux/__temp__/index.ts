@@ -3,7 +3,7 @@ import { createActionCreators, createReducerFunction } from "immer-reducer"
 import DataImmerReducer, { TemplateDataType } from "./reducers"
 
 const INITIAL_STATE: TemplateDataType = {
-  field: "",
+   field: "",
 }
 
 export const TemplateActions = createActionCreators(DataImmerReducer)

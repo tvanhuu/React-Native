@@ -4,8 +4,8 @@ import { LanguageReducers } from "/redux/language"
 import { UserReducer } from "/redux/user"
 
 const reducers = combineReducers({
-  [AppReducerType.LANGUAGE]: LanguageReducers,
-  [AppReducerType.USER]: UserReducer,
+   [AppReducerType.LANGUAGE]: LanguageReducers,
+   [AppReducerType.USER]: UserReducer,
 })
 
 export default reducers

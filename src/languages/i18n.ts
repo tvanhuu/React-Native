@@ -16,7 +16,7 @@ I18n.locale = languageTag
 export const appLanguages = I18n.translations as { [key in keyof typeof languages]: AppLanguage }
 
 export const getLanguage = (languageKey: keyof typeof languages) => {
-  I18n.locale = languageKey
+   I18n.locale = languageKey
 
-  return I18n.translations[languageKey] as AppLanguage
+   return I18n.translations[languageKey] as AppLanguage
 }

@@ -4,7 +4,7 @@ import { appLanguages } from "/languages"
 import LanguageImmerReducers from "./reducers"
 
 const INIT_STATE: { currentLanguage: keyof typeof appLanguages } = {
-  currentLanguage: "en",
+   currentLanguage: "en",
 }
 
 export const LanguageActions = createActionCreators(LanguageImmerReducers)

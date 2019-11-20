@@ -1,3 +1,3 @@
 export interface GetDataInfoParams {
-  id?: string
+   id?: string
 }
