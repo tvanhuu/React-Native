@@ -11,19 +11,19 @@ export default StyleSheet.create({
       shadowOffset: { width: 0, height: 3 },
       shadowRadius: radius.m,
       shadowColor: color.black,
-      shadowOpacity: 0.1,
+      shadowOpacity: 0.1
    },
    expand: {
-      flex: 1,
+      flex: 1
    },
    centerRow: {
       flexDirection: "row",
-      alignItems: "center",
+      alignItems: "center"
    },
    errorText: {
       color: color.red,
       marginTop: 5,
-      fontSize: fontSize.error,
+      fontSize: fontSize.error
    },
    position: {
       position: "absolute",
@@ -32,6 +32,6 @@ export default StyleSheet.create({
       top: 0,
       bottom: 0,
       right: 0,
-      left: 0,
-   },
+      left: 0
+   }
 })

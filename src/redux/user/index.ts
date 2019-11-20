@@ -5,7 +5,7 @@ import UserImmerReducer from "./reducers"
 
 const INIT_STATE: ReduxData<User> = {
    data: {},
-   status: ReduxStateType.INIT,
+   status: ReduxStateType.INIT
 }
 
 export const UserActions = createActionCreators(UserImmerReducer)

@@ -8,9 +8,9 @@ export const en: AppLanguage = {
       close: "Close",
       ok: "Ok",
       yes: "Yes",
-      no: "No",
+      no: "No"
    },
    error: {
-      error: "Do somethings Error",
-   },
+      error: "Do somethings Error"
+   }
 }

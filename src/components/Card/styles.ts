@@ -7,6 +7,6 @@ export default StyleSheet.create({
       ...style.shadow,
       backgroundColor: color.white,
       borderRadius: radius.m,
-      padding: spacing.m,
-   },
+      padding: spacing.m
+   }
 })

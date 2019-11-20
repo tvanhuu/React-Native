@@ -8,7 +8,7 @@ import { setAccessToken } from "/apis/request"
 export const loggerOptions: ReduxLoggerOptions = {
    collapsed: true,
    duration: true,
-   timestamp: true,
+   timestamp: true
 }
 
 export const sagaOptions: SagaMiddlewareOptions = {}
@@ -25,7 +25,7 @@ export const persistOptions: PersistConfig = {
          }
 
          return state
-      }),
+      })
 
       // transform state being rehydrated
       // (state) => {
@@ -35,5 +35,5 @@ export const persistOptions: PersistConfig = {
 
       //   return state
       // }
-   ],
+   ]
 }

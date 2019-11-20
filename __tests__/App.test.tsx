@@ -13,7 +13,7 @@ import App from "/App"
 import { render } from "react-native-testing-library"
 
 const createTestProps = (props?: object) => ({
-   ...props,
+   ...props
 })
 
 describe("App", () => {

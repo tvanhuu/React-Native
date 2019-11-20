@@ -5,5 +5,5 @@ export default {
    l: 16,
    xl: 18,
    xxl: 24,
-   error: 14,
+   error: 14
 }

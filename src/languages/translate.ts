@@ -11,7 +11,7 @@ export const translate = (key: string, options?: TranslateOptions) => {
       ? i18n.t(key, {
            message: key,
            defaultValue: key,
-           ...options,
+           ...options
         })
       : key
 }

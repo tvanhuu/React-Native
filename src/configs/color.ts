@@ -25,7 +25,7 @@ const colors = {
    opacityBlack: "rgba(0, 0, 0, 0.5)",
    opacityBrowCafe: "rgba(219, 171, 105, 0.5)",
    semiGray: "#E4E7E8",
-   shadow: "rgba(0, 0, 0, 0.15)",
+   shadow: "rgba(0, 0, 0, 0.15)"
 }
 
 export default {
@@ -36,5 +36,5 @@ export default {
    text: colors.darkGray,
    error: colors.red,
    shadow: colors.black,
-   ...colors,
+   ...colors
 }

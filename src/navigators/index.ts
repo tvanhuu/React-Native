@@ -5,11 +5,11 @@ import { SplashScreen, Temp } from "/screens"
 const RootNavigator = createSwitchNavigator(
    {
       [Routes.SPLASH_SCREEN]: SplashScreen,
-      [Routes.TEMP]: Temp,
+      [Routes.TEMP]: Temp
    },
    {
-      initialRouteName: Routes.SPLASH_SCREEN,
-   },
+      initialRouteName: Routes.SPLASH_SCREEN
+   }
 )
 
 export default createAppContainer(RootNavigator)

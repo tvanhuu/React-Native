@@ -8,9 +8,9 @@ export const vn: AppLanguage = {
       close: "Đóng lại",
       ok: "Ok",
       yes: "Yes",
-      no: "No",
+      no: "No"
    },
    error: {
-      error: "Co loi xay ra vui long kiem tra lai",
-   },
+      error: "Co loi xay ra vui long kiem tra lai"
+   }
 }

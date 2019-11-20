@@ -2,7 +2,7 @@ import { CallEffect } from "redux-saga/effects"
 
 export enum AppReducerType {
    LANGUAGE = "languages",
-   USER = "users",
+   USER = "users"
 }
 
 export enum ReduxStateType {
@@ -10,7 +10,7 @@ export enum ReduxStateType {
    LOADING = "loading",
    SUCCESS = "success",
    ERROR = "error",
-   CANCELLED = "cancelled",
+   CANCELLED = "cancelled"
 }
 
 export interface ReduxData<T> {

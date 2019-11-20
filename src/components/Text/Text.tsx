@@ -8,7 +8,7 @@ class Text extends PureComponent<TextProps> {
    public static defaultProps: TextProps = {
       typography: "normal",
       style: {},
-      color: color.text,
+      color: color.text
    }
 
    render() {

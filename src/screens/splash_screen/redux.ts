@@ -13,14 +13,14 @@ const mapStateToProps = (state: AppState) => {
       lang: languageSelector(state),
       currentLang: currentLanguageSelector(state),
       userState: UserStateSelector(state),
-      userInfo: UserSelector(state),
+      userInfo: UserSelector(state)
    }
 }
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
    return {
       languageActions: bindActionCreators(LanguageActions, dispatch),
-      userAction: bindActionCreators(UserActions, dispatch),
+      userAction: bindActionCreators(UserActions, dispatch)
    }
 }
 
