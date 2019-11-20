@@ -6,6 +6,7 @@ import { compose } from "redux"
 import { withRedux } from "./redux"
 import { log } from "/utils/log"
 import { Props, State } from "./types"
+import Config from "react-native-config"
 
 class Splash extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -21,6 +22,7 @@ class Splash extends React.Component<Props, State> {
   onSelectLanguage(value: keyof typeof appLanguages) {}
 
   render() {
+    // log(Config.BASE_URL)
     const { currentLang, lang, languageActions } = this.props
     // setTimeout(() => languageActions.setLanguage("vn"), 5000)
 

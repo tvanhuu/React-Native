@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from "axios"
 import _ from "lodash"
-// import Config from "react-native-config"
+import Config from "react-native-config"
 import get from "ts-get"
 
 import { checkLocale } from "/helpers/Common"
@@ -8,41 +8,36 @@ import { log } from "/utils/log"
 
 import { commonErrorMessage, commonErrors } from "./errors"
 
-const requestLog = (
-  method: string = "",
-  url: string = "",
-  data: unknown,
-  type: "req" | "res" | "err"
-) => {
+const requestLog = (method: string = "", url: string = "", data: unknown, type: "req" | "res" | "err") => {
   const tag = type === "req" || type === "res" ? method : "error"
   const colors = {
     req: "blue",
     res: "green",
-    err: "red"
+    err: "red",
   }
   const icons = {
     req: ">>>",
     res: "<<<",
-    err: "xxx"
+    err: "xxx",
   }
 
   log(
     `%c${icons[type]} [${tag.toUpperCase()}] | %c${url.replace("Config.BASE_URL", "")} \n`,
     `color: ${colors[type]}; font-weight: bold`,
     "color: violet; font-weight: bold",
-    data
+    data,
   )
 }
 
 const headers = {
   "Content-Type": "application/json",
-  "Accept-Language": checkLocale("en") // default English
+  "Accept-Language": checkLocale("en"), // default English
 }
 
 const Request = axios.create({
-  baseURL: "Config.BASE_URL",
+  baseURL: Config.BASE_URL,
   timeout: 10000,
-  headers
+  headers,
   // ... other configs
 })
 
@@ -57,7 +52,7 @@ Request.interceptors.request.use(
     log("request.error", { errorData })
 
     return errorData
-  }
+  },
 )
 
 Request.interceptors.response.use(
@@ -83,7 +78,7 @@ Request.interceptors.response.use(
     }
 
     return Promise.reject(errorData)
-  }
+  },
 )
 
 export const setAccessToken = (token?: string) => {
