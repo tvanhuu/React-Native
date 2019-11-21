@@ -1,10 +1,8 @@
 import { UserActions } from "./index"
-import { call, put, SagaReturnType, takeLatest, all, Effect, CallEffect, ForkEffect } from "redux-saga/effects"
+import { call, put, takeLatest, all } from "redux-saga/effects"
 import { User } from "/models/User"
 import * as authApi from "/apis/users"
-import { Task } from "react-native"
-import { EffectResult } from "../types"
-import { type } from "os"
+import { EffectResult } from "/redux/types"
 
 export function* login(action: ReturnType<typeof UserActions.login>): Generator {
   try {
@@ -12,7 +10,7 @@ export function* login(action: ReturnType<typeof UserActions.login>): Generator 
 
     // TODO setToken
 
-    yield put(UserActions.success(user))
+    yield put(UserActions.success(user as User))
   } catch (error) {
     yield put(UserActions.error(error))
   }
@@ -25,5 +23,3 @@ function* watchLogin() {
 export default function* userSaga() {
   yield all([watchLogin()])
 }
-
-type Check<T> = T extends unknown ? {} : T

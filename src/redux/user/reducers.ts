@@ -8,7 +8,7 @@ export default class UserImmerReducer extends ImmerReducer<ReduxData<User>> {
     this.draftState.status = ReduxStateType.LOADING
   }
 
-  success(user: User) {
+  success(user?: User) {
     this.draftState.status = ReduxStateType.SUCCESS
     if (user) this.draftState.data = { ...this.state.data, ...user }
   }
